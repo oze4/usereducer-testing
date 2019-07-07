@@ -1,9 +1,7 @@
 import React from 'react';
 import Counter from './Components/Counter.js';
 import SeparateComponent from './Components/SeparateComponent.js';
-import { CounterProvider } from './Components/Context.js';
-//import logo from './logo.svg';
-import './App.css';
+import { CounterProvider } from './ContextProviders';
 
 
 const styles = {

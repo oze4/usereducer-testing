@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { CounterContext } from './Context.js';
+import { CounterContext } from '../ContextProviders';
 
 export default function SeparateComponent() {
     const { state } = useContext(CounterContext);
+    
     return (
         <div>
             <h1>Shared Count: {state.count}</h1>
