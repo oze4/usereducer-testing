@@ -1,10 +1,10 @@
 import React, { useReducer } from 'react'
-import { handleCount } from '../Actions';
+import { handleCountReducer } from '../Reducers';
 import { initialState, CounterContext } from './CounterContext.js';
 
 
 export const CounterProvider = (props) => {
-    const [state, dispatch] = useReducer(handleCount, initialState);
+    const [state, dispatch] = useReducer(handleCountReducer, initialState);
 
     return (
         <CounterContext.Provider value={{state, dispatch}}>

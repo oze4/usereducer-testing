@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CounterContext } from '../ContextProviders';
+import { counterActions } from '../Actions';
 
 
 export default function Counter() {
@@ -8,9 +9,9 @@ export default function Counter() {
     return (
         <div>
             <h5>Count: {state.count}</h5>
-            <button onClick={() => dispatch({ type: "increment" })}> + </button>
-            <button onClick={() => dispatch({ type: "decrement" })}> - </button>
-            <button onClick={() => dispatch({ type: "setVal", val: 10 })}> setVal </button>
+            <button onClick={() => dispatch({ type: counterActions.INCREMENT })}> + </button>
+            <button onClick={() => dispatch({ type: counterActions.DECREMENT })}> - </button>
+            <button onClick={() => dispatch({ type: counterActions.SET_VAL, val: 10 })}> setVal </button>
         </div>
     );
 }
